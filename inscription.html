@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!--index.html-->
+<!--Programmé par Tamanaco Martínez-->
+<!--derniere modification : 2021-01-15-->
+<html lang="fr-ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"> 
+    <title>Inscription</title>
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+
+</head>
+<body>
+  
+        <header>
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="aPropos.html">À Propos</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="inscription.html">Inscription<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="fonctionnalité.html">Convertisseur</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+
+      
+
+        </header>  
+
+        <section>
+
+            <h2 class="text-center pt-5 font">Inscription</h2>
+            <form class="pt-5 font" name="formulaire" onsubmit="return formulaireFunction()" method="post">
+                <div class="form-group w-25 pl-5">
+                  <label for=nom class="font-weight-bold">Nom</label>
+                  <input type="text" class="form-control" id="nom" aria-describedby="emailHelp"  name="nom" placeholder="Entrez votre nom">
+                  <small id="emailHelp" class="form-text text-muted"></small>
+                </div>
+                <div class="form-group w-25 pl-5">
+                  <label for="prenom" class="font-weight-bold">Prenom</label>
+                  <input type="text" class="form-control" id="prenom"  name="prenom" placeholder="Entrez votre prenom">
+                </div>
+                <div class="form-group w-25 pl-5">
+                    <label for="email" class="font-weight-bold">Adresse e-mail</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Entrez votre adresse e-mail">
+                  </div>
+                  <div class="form-group w-25 pl-5">
+                    <label for="confirmation" class="font-weight-bold">Confirmez votre adresse e-mail</label>
+                    <input type="email" class="form-control" id="confirmation" name="confirmation" placeholder="Confirmez votre adresse e-mail">
+                  </div>
+                  <div class="form-group w-25 pl-5">
+                    <label for="motDePasse" class="font-weight-bold">Entrez votre mot de passe</label>
+                    <input type="password" class="form-control" id="motDePasse" name="motDePasse" placeholder="Entrez votre mot de passe">
+                  </div>
+                  <div class="form-group w-25 pl-5">
+                    <label for="confirmationMotDePasse" class="font-weight-bold">Confirmez votre mot de passe</label>
+                    <input type="password" class="form-control" id="confirmationMotDePasse" name="confirmationMotDePasse" placeholder="Confirmez votre mot de passe">
+                  </div>
+                  <p class="pl-5 font-weight-bold">Votre Genre</p>
+                <div class="form-check pl-5">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Homme
+                    </label>
+                  </div>
+                  <div class="form-check pl-5">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Femme
+                    </label>
+                  </div>
+                  <div class="form-check pl-5">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Autre
+                    </label>
+                  </div>
+
+                <button type="submit" class="btn btn-primary pl-5 pt-5">Submit</button>
+              </form>
+        </section>
+        
+        <!-- Cela aurait été plus facile pour moi de faire la validation en html, mais 
+          je voulais m’essayer en javascript. J’ai suivi des exemples que j’ai trouvé sur 
+          le web pour essayer de les valider et j’ai passé pas mal d’heures à faire de tests 
+          sans succès. Je pense que le code fait plus ou moins de sense mais il y a surement 
+          des erreurs quelque part. Je trouve qu’il me manquent encore des informations pour 
+          réussir la validation. J’espère avoir ton feedback la dessus! -->
+
+
+
+ 
+        <script>
+           function formulaireFunction() {
+        var nom = document.forms["formulaire"]["nom"];
+        var prenom = document.forms["formulaire"]["prenom"];
+        var email = document.forms["formulaire"]["email"];
+        var confirmation = document.forms["formulaire"]["confirmation"];
+        var password = document.forms["formulaire"]["Password"];
+        var motDePasse = document.forms["formulaire"]["motDePasse"];
+        var confirmationMotDePasse = document.forms["formulaire"]["confirmationMotDePasse"];
+        var flexRadioDefault = document.forms["formulaire"]["flexRadioDefault"];
+  
+        if (nom.value == "") {
+            window.alert("S'il vous plaît, entrez votre nom");
+            nom.focus();
+            return false;
+        }
+  
+        if (prenom.value == "") {
+            window.alert("S'il vous plaît, entrez votre prenom");
+            prenom.focus();
+            return false;
+        }
+  
+        if (email.value == "") {
+            window.alert("S'il vous plaît, entrez votre adresse courriel");
+            email.focus();
+            return false;
+        }  
+        
+        if (confirmation.value == "") {
+            window.alert("S'il vous plaît, confirmez votre adresse courriel");
+            confirmation.focus();
+            return false;
+        }
+        
+        if (motDePasse.value == "") {
+            window.alert("S'il vous plaît, entrez votre mot de passe");
+            motDePasse.focus();
+            return false;
+        }
+        
+        if (confirmationMotDePasse.value == "") {
+            window.alert("S'il vous plaît, confirmez votre mot de passe");
+            confirmationMotDePasse.focus();
+            return false;
+        }  
+        
+        if (flexRadioDefault.value == "") {
+            window.alert("S'il vous plaît, choisissez une option");
+            flexRadioDefault.focus();
+            return false;
+        }
+        
+        return true;
+    }
+   
+        </script>
+  
+
+  
+
+<script src="https://kit.fontawesome.com/a46d75ba7a.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="bootstrap-4.3.1-dist/js/bootstrap.js"></script> 
+</body>
+

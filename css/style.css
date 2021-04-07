@@ -1,0 +1,100 @@
+/* style.css */
+/* Programmé par Tamanaco Martínez */
+/* Dernière Modification: 2021-01-16 */
+
+body {
+    background-color: black;
+
+}
+
+.font {
+    color: beige;   
+}
+
+hr{
+    margin-bottom:30px;
+    margin-top:30px;
+    max-width: 50px;
+    border-width: 3px;
+    border-color: #f05f40;
+    }
+
+/*style de la section banniere */
+#containerBanniere {
+    background-image: url(../img/backgroundBannier.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 10%;
+    color: white;
+}
+
+.customBoutton {
+    border-radius: 1rem;  
+}
+
+.couleurOrange {
+    background-color: #f05f40;
+    border-color: #f05f40;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+/*style de la section get started*/
+.couleurBlanc {
+    background-color: white;
+    border-color: white;
+    color: black;
+
+}
+
+
+#containerGetStarted {
+    background-color: #f05f40;
+    padding: 2.5%;
+    color: white;
+}
+
+#hrBlanc {
+    border-color: white;
+}
+
+
+i{
+    font-size: 5rem;
+    color: #f05f40;
+}
+
+.fondRouge {
+    background-color: red;
+    height: 15em;
+}
+
+.fondBleu {
+    background-color: blue;
+    height: 15em;
+}
+
+.fondJaune {
+    background-color: yellow;
+    height: 15em;
+}
+
+.fondVert {
+    background-color: green;
+    height: 15em;
+}
+
+img {
+    vertical-align: middle;
+    border-style: double;
+    margin-bottom: inherit;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}

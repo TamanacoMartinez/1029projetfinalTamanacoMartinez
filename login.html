@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--index.html-->
+<!--Programmé par Tamanaco Martínez-->
+<!--derniere modification : 2021-01-15-->
+<html lang="fr-ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"> 
+    <title>Login</title>
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+  
+
+</head>
+
+<body>
+  
+        <header>
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+        
+                    <li class="nav-item active">
+                      <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="aPropos.html">À Propos</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="inscription.html">Inscription</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fonctionnalité.html">Convertisseur</a>
+                      </li>
+                  </ul>
+                </div>
+              </nav>
+      
+        </header>  
+
+ 
+        
+              <section>
+                <form name="formulaire1" class="pt-5 font" onsubmit="return required()" method="post">
+                  <div class="form-group w-25 ">
+                    <label for="exampleInputEmail1" class="font-weight-bold">Adresse courriel</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1"  name ="texte1" aria-describedby="emailHelp" placeholder="Entrez votre adresse courriel">
+                  </div>
+                  <div class="form-group w-25">
+                    <label for="exampleInputPassword1" class="font-weight-bold">Mot de passe</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" name="texte2" placeholder="Mot de passe">
+                  </div>
+                  <button type="submit" class="btn btn-primary"></button>Soumettre</button>
+                </form>
+              </section>
+              
+              <script>
+                 
+                 function required()
+                            {
+                            var x = document.forms["formulaire"]["texte1"]["texte2"].value;
+                            if (x == "")
+                            {
+                            alert("Remplissez le champ s'il vous plait!");
+                            return false;
+                            }
+                            else 
+                            {
+                            alert("parfait! passez au suivant!");
+                            return true; 
+                            }
+                            }
+        
+            </script>
+                      
+
+<script src="https://kit.fontawesome.com/a46d75ba7a.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="bootstrap-4.3.1-dist/js/bootstrap.js"></script> 
+</body>
+
