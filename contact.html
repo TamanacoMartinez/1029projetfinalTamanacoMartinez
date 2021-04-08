@@ -46,7 +46,7 @@
 
         </header>  
 
-        <form name="formulaire1" class="pt-5 font" onsubmit="required()">
+        <form name="formulaire" class="pt-5 font" onsubmit="required()">
           <div class="form-group w-25 ">
             <label for="exampleInputEmail1" class="font-weight-bold">Adresse courriel</label>
             <input type="email" class="form-control" id="exampleInputEmail1"  name ="texte1" aria-describedby="emailHelp" placeholder="Entrez votre adresse courriel">
@@ -55,12 +55,28 @@
             <label for="exampleInputPassword1" class="font-weight-bold">Mot de passe</label>
             <input type="password" class="form-control" id="exampleInputPassword1" name="texte2" placeholder="Mot de passe">
           </div>
-          <button type="submit" class="btn btn-primary"></button>Soumettre</button>
+          <button type="submit" class="btn btn-primary" name="soumettre" onclick="Validation(document.formulaire.texte1)"></button>Soumettre</button>
         </form>
       
       <script>
 
-          
+        function Validation(inputText)
+        {
+        var format = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if(inputText.value.match(format))
+        {
+        alert("Adresse courriel valide!");
+        document.formulaire.texte1.focus();
+        return true;
+        }
+        else
+        {
+        alert("Vous avez entré(e) une adresse courriel invalide!");
+        document.formulaire.texte1.focus();
+        return false;
+        }
+        }
+                  
 
 
       

@@ -52,7 +52,7 @@
  
         
               <section>
-                <form name="formulaire1" class="pt-5 font" onsubmit="return required()" method="post">
+                <form name="formulaire" class="pt-5 font" onsubmit="return required()" method="post">
                   <div class="form-group w-25 ">
                     <label for="exampleInputEmail1" class="font-weight-bold">Adresse courriel</label>
                     <input type="email" class="form-control" id="exampleInputEmail1"  name ="texte1" aria-describedby="emailHelp" placeholder="Entrez votre adresse courriel">
@@ -65,19 +65,34 @@
                 </form>
               </section>
               
+               
+              <!-- Cela aurait été plus facile pour moi de faire la validation en html, mais 
+          je voulais m’essayer en javascript. J’ai suivi des exemples que j’ai trouvé sur 
+          le web pour essayer de les valider et j’ai passé pas mal d’heures à faire de tests 
+          sans succès. Finalement J'ai reussi à faire certaines validations mais pas toutes. 
+          Je trouve qu’il me manquent encore des informations pour y réussir. 
+          J’espère avoir ton feedback la dessus! -->
+
+
               <script>
-                 
+                    
                  function required()
                             {
-                            var x = document.forms["formulaire"]["texte1"]["texte2"].value;
-                            if (x == "")
+                            var courriel = document.forms["formulaire"]["texte1"];
+                            var motDePasse = document.forms["formulaire"]["texte2"];  
+                            if (courriel.value == "")
                             {
-                            alert("Remplissez le champ s'il vous plait!");
+                            alert("Entrez une adresse de courriel valide s'il vous plaît!");
+                            return false;
+                            }
+                            else if (motDePasse.value == "")
+                            {
+                            alert("entrez votre mot de passe s'il vous plaît!");
                             return false;
                             }
                             else 
                             {
-                            alert("parfait! passez au suivant!");
+                            alert("Merci!");
                             return true; 
                             }
                             }
